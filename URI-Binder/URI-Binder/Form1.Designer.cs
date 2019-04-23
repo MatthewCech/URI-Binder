@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(URIBinder));
             this.selectAppDialog = new System.Windows.Forms.OpenFileDialog();
             this.appSelectButon = new System.Windows.Forms.Button();
             this.appSelectText = new System.Windows.Forms.TextBox();
@@ -183,6 +184,8 @@
             this.Controls.Add(this.uriNameText);
             this.Controls.Add(this.appSelectText);
             this.Controls.Add(this.appSelectButon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "URIBinder";
             this.Text = "URI Binder";
             this.ResumeLayout(false);
