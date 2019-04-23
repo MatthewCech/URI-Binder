@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace URI_Binder
 {
-    public partial class Form1 : Form
+    public partial class URIBinder : Form
     {
-        public Form1()
+        public URIBinder()
         {
             InitializeComponent();
+        }
+
+        private void appSelectButon_Click(object sender, EventArgs e)
+        {
+            selectAppDialog.dis
         }
     }
 }
