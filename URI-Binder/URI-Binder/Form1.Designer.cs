@@ -43,7 +43,7 @@
             // 
             // selectAppDialog
             // 
-            this.selectAppDialog.FileName = "app";
+            this.selectAppDialog.DefaultExt = "exe";
             // 
             // appSelectButon
             // 

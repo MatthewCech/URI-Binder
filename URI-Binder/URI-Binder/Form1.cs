@@ -17,9 +17,14 @@ namespace URI_Binder
             InitializeComponent();
         }
 
+        // We are selecting an app to bind to
         private void appSelectButon_Click(object sender, EventArgs e)
         {
-            selectAppDialog.dis
+            selectAppDialog.Filter = "exe files (*.exe)|*.exe";
+            if (selectAppDialog.ShowDialog() == DialogResult.OK)
+            {
+                progressLabel.Text = "application specified";
+            }
         }
     }
 }
