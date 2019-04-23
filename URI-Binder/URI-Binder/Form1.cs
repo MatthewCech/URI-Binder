@@ -36,15 +36,16 @@ namespace URI_Binder
         // Registry stuff
         const string classesRoot = "HKEY_CLASSES_ROOT";
         const string sep = "\\";
-        const string rootKey = classesRoot + sep + "ztest";
-        const string subkey_DefaultIcon = rootKey + sep + "DefaultIcon";
-        const string subkey_ShellOpenCommand = rootKey + sep + "shell" + sep + "open" + sep + "command";
-        const string subkey_URLProtocol = rootKey + "URL Protocol";
+        string rootKey;
+        string subkey_DefaultIcon;
+        string subkey_ShellOpenCommand;
+        string subkey_URLProtocol;
 
         // Things we need
         string app;
         string uri;
         string filename;
+        string filenameNoExtension;
 
         // Constructor
         public URIBinder()
@@ -59,6 +60,12 @@ namespace URI_Binder
                 progressLabel.Text = "WAIT! You must run this application as admin!";
                 progressLabel.ForeColor = Color.Red;
             }
+
+            // Provide defaults for debugging
+            rootKey = classesRoot + sep + "uribinder-default";
+            subkey_DefaultIcon = rootKey + sep + "DefaultIcon";
+            subkey_ShellOpenCommand = rootKey + sep + "shell" + sep + "open" + sep + "command";
+            subkey_URLProtocol = rootKey + sep + "URL Protocol";
         }
 
 
@@ -134,8 +141,15 @@ namespace URI_Binder
                     setProgress(1);
                     progressLabel.Text = state.ToString();
 
-                    // Config
+                    // Parse file info
                     filename = Path.GetFileName(app);
+                    filenameNoExtension = Path.GetFileNameWithoutExtension(app);
+
+                    // Configure registry variables
+                    rootKey = classesRoot + sep + uri;
+                    subkey_DefaultIcon = rootKey + sep + "DefaultIcon";
+                    subkey_ShellOpenCommand = rootKey + sep + "shell" + sep + "open" + sep + "command";
+                    subkey_URLProtocol = rootKey + sep + "URL Protocol";
 
                     state = BinderState.CreateRootKey;
                     break;
