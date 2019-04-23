@@ -9,4 +9,5 @@ Resources:
 - https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component
 - https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.filedialog.filter?view=netframework-4.8
 - https://docs.microsoft.com/en-us/dotnet/api/microsoft.win32.registry.setvalue?view=netframework-4.8
+- https://stackoverflow.com/questions/11660184/c-sharp-check-if-run-as-administrator
 
