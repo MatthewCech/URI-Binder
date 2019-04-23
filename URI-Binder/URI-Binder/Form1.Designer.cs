@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.selectAppDialog = new System.Windows.Forms.OpenFileDialog();
             this.appSelectButon = new System.Windows.Forms.Button();
             this.appSelectText = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.createButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.progressLabel = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // selectAppDialog
@@ -116,6 +118,7 @@
             this.createButton.TabIndex = 9;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // progressBar
             // 
@@ -127,12 +130,18 @@
             // progressLabel
             // 
             this.progressLabel.AutoSize = true;
+            this.progressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.progressLabel.ForeColor = System.Drawing.Color.Gray;
             this.progressLabel.Location = new System.Drawing.Point(12, 183);
             this.progressLabel.Name = "progressLabel";
-            this.progressLabel.Size = new System.Drawing.Size(22, 13);
+            this.progressLabel.Size = new System.Drawing.Size(18, 12);
             this.progressLabel.TabIndex = 11;
             this.progressLabel.Text = ". . .";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // URIBinder
             // 
@@ -169,6 +178,7 @@
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label progressLabel;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
