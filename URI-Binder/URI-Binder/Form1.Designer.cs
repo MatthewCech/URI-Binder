@@ -35,12 +35,14 @@
             this.uriNameText = new System.Windows.Forms.TextBox();
             this.appSelectLabel = new System.Windows.Forms.Label();
             this.uriNameLabel = new System.Windows.Forms.Label();
-            this.uriInfo = new System.Windows.Forms.Label();
             this.appInfo = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.progressLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.uriInfo = new System.Windows.Forms.Label();
+            this.uriSample = new System.Windows.Forms.Label();
+            this.uriPreview = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectAppDialog
@@ -70,6 +72,7 @@
             this.uriNameText.Name = "uriNameText";
             this.uriNameText.Size = new System.Drawing.Size(100, 20);
             this.uriNameText.TabIndex = 4;
+            this.uriNameText.TextChanged += new System.EventHandler(this.uriNameText_TextChanged);
             // 
             // appSelectLabel
             // 
@@ -88,16 +91,6 @@
             this.uriNameLabel.Size = new System.Drawing.Size(57, 13);
             this.uriNameLabel.TabIndex = 6;
             this.uriNameLabel.Text = "URI Name";
-            // 
-            // uriInfo
-            // 
-            this.uriInfo.AutoSize = true;
-            this.uriInfo.ForeColor = System.Drawing.Color.Gray;
-            this.uriInfo.Location = new System.Drawing.Point(6, 86);
-            this.uriInfo.Name = "uriInfo";
-            this.uriInfo.Size = new System.Drawing.Size(355, 13);
-            this.uriInfo.TabIndex = 7;
-            this.uriInfo.Text = "This is the text on the left of an app link. \'example\' would be \'example://...\'";
             // 
             // appInfo
             // 
@@ -143,11 +136,43 @@
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // uriInfo
+            // 
+            this.uriInfo.AutoSize = true;
+            this.uriInfo.ForeColor = System.Drawing.Color.Gray;
+            this.uriInfo.Location = new System.Drawing.Point(6, 86);
+            this.uriInfo.Name = "uriInfo";
+            this.uriInfo.Size = new System.Drawing.Size(355, 13);
+            this.uriInfo.TabIndex = 7;
+            this.uriInfo.Text = "This is the text on the left of an app link. \'example\' would be \'example://...\'";
+            // 
+            // uriSample
+            // 
+            this.uriSample.AutoSize = true;
+            this.uriSample.ForeColor = System.Drawing.Color.Gray;
+            this.uriSample.Location = new System.Drawing.Point(60, 125);
+            this.uriSample.Name = "uriSample";
+            this.uriSample.Size = new System.Drawing.Size(22, 13);
+            this.uriSample.TabIndex = 12;
+            this.uriSample.Text = ". . .";
+            // 
+            // uriPreview
+            // 
+            this.uriPreview.AutoSize = true;
+            this.uriPreview.ForeColor = System.Drawing.Color.Gray;
+            this.uriPreview.Location = new System.Drawing.Point(6, 125);
+            this.uriPreview.Name = "uriPreview";
+            this.uriPreview.Size = new System.Drawing.Size(48, 13);
+            this.uriPreview.TabIndex = 13;
+            this.uriPreview.Text = "Preview:";
+            // 
             // URIBinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 205);
+            this.Controls.Add(this.uriPreview);
+            this.Controls.Add(this.uriSample);
             this.Controls.Add(this.progressLabel);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.createButton);
@@ -173,12 +198,14 @@
         private System.Windows.Forms.TextBox uriNameText;
         private System.Windows.Forms.Label appSelectLabel;
         private System.Windows.Forms.Label uriNameLabel;
-        private System.Windows.Forms.Label uriInfo;
         private System.Windows.Forms.Label appInfo;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label progressLabel;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label uriInfo;
+        private System.Windows.Forms.Label uriSample;
+        private System.Windows.Forms.Label uriPreview;
     }
 }
 

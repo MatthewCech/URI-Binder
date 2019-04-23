@@ -22,12 +22,16 @@ namespace URI_Binder
 
     public partial class URIBinder : Form
     {
+        // Variables
         BinderState state;
+        string uriExample = "://args";
 
+        // Ctor
         public URIBinder()
         {
-            state = BinderState.Idle;
             InitializeComponent();
+
+            state = BinderState.Idle;
         }
 
         // Internal to create keys
@@ -36,7 +40,7 @@ namespace URI_Binder
             return "";
         }
 
-        // We are selecting an app to bind to
+        // We are selecting an app to bind to.
         private void appSelectButon_Click(object sender, EventArgs e)
         {
             selectAppDialog.Filter = "exe files (*.exe)|*.exe";
@@ -63,6 +67,7 @@ namespace URI_Binder
             progressBar.Value = (int)(which / (Enum.GetNames(typeof(BinderState)).Length - 1) * 100);
         }
 
+        // State machine execution - upkeep every 100ms
         private void timer_Tick(object sender, EventArgs e)
         {
             switch(state)
@@ -91,6 +96,12 @@ namespace URI_Binder
                     progressLabel.Text = state.ToString();
                     break;
             }
+        }
+
+        // When URI is being typed...
+        private void uriNameText_TextChanged(object sender, EventArgs e)
+        {
+            uriSample.Text = uriNameText.Text + uriExampleEnd;
         }
     }
 }
