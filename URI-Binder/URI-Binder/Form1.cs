@@ -174,7 +174,7 @@ namespace URI_Binder
 
                     Registry.SetValue(subkey_URLProtocol, "", "");
 
-                    state = BinderState.CreateURLProtocol;
+                    state = BinderState.Done;
                     break;
 
                 case BinderState.Done:
