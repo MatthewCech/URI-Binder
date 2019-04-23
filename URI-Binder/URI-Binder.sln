@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "URI-Binder", "URI-Binder\URI-Binder.csproj", "{A2DBBB5B-D5F3-462A-BF7F-4FEF4AFF4D18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2DBBB5B-D5F3-462A-BF7F-4FEF4AFF4D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DBBB5B-D5F3-462A-BF7F-4FEF4AFF4D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DBBB5B-D5F3-462A-BF7F-4FEF4AFF4D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DBBB5B-D5F3-462A-BF7F-4FEF4AFF4D18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABD5D20F-E4F2-42EB-93C5-E49640CD5F0C}
+	EndGlobalSection
+EndGlobal
