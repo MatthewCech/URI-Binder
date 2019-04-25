@@ -88,8 +88,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon-128.ico" />
-    <Content Include="icon-64.ico" />
     <Content Include="icon.ico" />
     <None Include="Resources\icon-64.ico" />
   </ItemGroup>
