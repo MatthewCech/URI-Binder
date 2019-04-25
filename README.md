@@ -1,6 +1,6 @@
 URI Binder
 ---
-Want to be able to launch an application from something like `myapplication://someargs`? Well, that's all this app is good for doing so I'm glad that's what you're after! This is a Windows-only .net 4.6.1 application, and it requires administrator privileges to run.
+Want to be able to launch an application from something like `myapp:args`? Well, that's all this app is good for doing so I'm glad that's what you're after! This is a Windows-only .net 4.6.1 application, and it requires administrator privileges to run.
 
 ---
 Quick list of resources, mostly for personal reference:
